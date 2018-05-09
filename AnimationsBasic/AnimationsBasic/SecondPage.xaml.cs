@@ -19,26 +19,24 @@ namespace AnimationsBasic
         private bool ShowDetails = false;
         private async void Animate_Clicked(object sender, EventArgs e)
         {
-            var boxToShow = ShowDetails ? card : details;
-            var boxToHide = ShowDetails ? details: card;
+           var cardToShow = ShowDetails ? card : details;
+           var cardToHide = ShowDetails ? details: card;
 
-            if(boxToHide.AnimationIsRunning("RotateYTo"))return;
+            cardToShow.HasShadow = false;
+            cardToHide.HasShadow = false;
 
-            boxToShow.HasShadow = false;
-            boxToHide.HasShadow = false;
+            await cardToHide.RotateYTo(90,125,Easing.Linear);
+            cardToHide.IsVisible = false;
 
-            await boxToHide.RotateYTo(90,125);
-            boxToHide.IsVisible = false;
+            cardToShow.RotationY = -90;
+            cardToShow.IsVisible = true;
 
-            boxToShow.RotationY = -90;
-            boxToShow.IsVisible = true;
-            
-            await boxToShow.RotateYTo(0,125);
+            await cardToShow.RotateYTo(0,200,Easing.SpringOut);
 
-            boxToShow.HasShadow = true;
-            boxToHide.HasShadow = true;
+            cardToShow.HasShadow = true;
+            cardToHide.HasShadow = true;
 
-            ShowDetails =!ShowDetails;
+            ShowDetails = !ShowDetails;
         }
     }
 }

@@ -13,9 +13,9 @@ namespace AnimationsBasic
 		{
 			InitializeComponent();
 		}
-        private void Animate_Clicked(object sender, EventArgs e)
+        private async void Animate_Clicked(object sender, EventArgs e)
         {
-            
+            await box.RelRotateTo(90);
         }
     }
 }

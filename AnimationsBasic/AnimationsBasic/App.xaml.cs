@@ -13,8 +13,8 @@ namespace AnimationsBasic
 
 			InitializeComponent();
 
-            //MainPage = new NavigationPage(new SecondPage());
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new SecondPage());
+            //MainPage = new NavigationPage(new MainPage());
         }
 
 		protected override void OnStart ()

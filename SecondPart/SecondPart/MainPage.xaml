@@ -2,8 +2,27 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:SecondPart"
+             xmlns:xamanimation="clr-namespace:Xamanimation;assembly=Xamanimation"
              x:Class="SecondPart.MainPage">
 
+    <Page.Resources>
+        <ResourceDictionary>
+
+            <xamanimation:StoryBoard x:Key="FloatingButtonEnter" 
+                                     Target="{x:Reference FloatingActionButton}">
+                <xamanimation:TranslateToAnimation Duration="0" TranslateY="600" />
+                <xamanimation:TranslateToAnimation TranslateY="0" Easing="SpringOut"/>
+            </xamanimation:StoryBoard>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Page.Triggers>
+        <EventTrigger Event="Appearing">
+            <xamanimation:BeginAnimation 
+                Animation="{StaticResource FloatingButtonEnter}"/>
+        </EventTrigger>
+    </Page.Triggers>
+    
     <Grid Padding="10">
 
         <Image x:Name="FloatingActionButton" Style="{StaticResource BotImageStyle}"

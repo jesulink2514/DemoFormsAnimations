@@ -17,9 +17,8 @@
             </StackLayout>
         </Frame>
         
-        <!--IsVisible="False"-->
         <Frame x:Name="details" HeightRequest="250"
-               BackgroundColor="White" 
+               BackgroundColor="White" IsVisible="False"
                
                HorizontalOptions="FillAndExpand">
             <StackLayout>
