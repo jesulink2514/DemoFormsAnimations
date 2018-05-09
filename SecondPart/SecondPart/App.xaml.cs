@@ -3,19 +3,16 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation (XamlCompilationOptions.Compile)]
-namespace AnimationsBasic
+namespace SecondPart
 {
 	public partial class App : Application
 	{
 		public App ()
 		{
-            LiveReload.Init();
-
 			InitializeComponent();
 
-            //MainPage = new NavigationPage(new SecondPage());
-            MainPage = new NavigationPage(new MainPage());
-        }
+			MainPage = new MainPage();
+		}
 
 		protected override void OnStart ()
 		{

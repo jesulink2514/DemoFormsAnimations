@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SecondPart.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BotImageStyle" 
+                   TargetType="Image">
+                <Setter Property="HorizontalOptions" 
+                        Value="End" />
+                <Setter Property="VerticalOptions" 
+                        Value="End" />
+                <Setter Property="Margin">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="Android" Value="-10, 0" />
+                            <On Platform="UWP, iOS" Value="0" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="WidthRequest">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="Android" Value="110" />
+                            <On Platform="UWP, iOS" Value="80" />
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

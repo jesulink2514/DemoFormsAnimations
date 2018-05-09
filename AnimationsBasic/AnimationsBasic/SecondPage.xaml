@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnimationsBasic.SecondPage"
+             BackgroundColor="LightGray" Title="Demo Animations">
+    <Grid VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="20">
+
+        <Frame x:Name="card" HeightRequest="250"
+               BackgroundColor="White"
+               HorizontalOptions="FillAndExpand">
+            <StackLayout>
+                <Image HorizontalOptions="FillAndExpand" HeightRequest="150"
+                       Aspect="AspectFill" Source="http://www.dike.lib.ia.us/images/sample-1.jpg/image"/>
+                <Label Text="Card 1 Title Sample" FontAttributes="Bold"/>
+                <Button Text="View details" CornerRadius="30" BackgroundColor="Purple" 
+                TextColor="White" HorizontalOptions="Center" Clicked="Animate_Clicked"/>
+            </StackLayout>
+        </Frame>
+        
+        <!--IsVisible="False"-->
+        <Frame x:Name="details" HeightRequest="250"
+               BackgroundColor="White" 
+               
+               HorizontalOptions="FillAndExpand">
+            <StackLayout>
+                <Label Text="Card 1 Title Sample" FontAttributes="Bold"/>
+                <Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." />
+                <Button Text="Back" CornerRadius="30" BackgroundColor="Purple" 
+                TextColor="White" HorizontalOptions="Center" Clicked="Animate_Clicked"/>
+            </StackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>

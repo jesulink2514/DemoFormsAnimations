@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace AnimationsBasic
+namespace SecondPart
 {
 	public partial class MainPage : ContentPage
 	{
@@ -13,9 +13,5 @@ namespace AnimationsBasic
 		{
 			InitializeComponent();
 		}
-        private void Animate_Clicked(object sender, EventArgs e)
-        {
-            
-        }
-    }
+	}
 }

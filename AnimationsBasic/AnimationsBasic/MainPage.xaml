@@ -2,13 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:AnimationsBasic"
-             x:Class="AnimationsBasic.MainPage">
+             x:Class="AnimationsBasic.MainPage" Title="Demo Animations">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Spacing="20">
+
+        <Frame x:Name="box" HeightRequest="50" WidthRequest="50"
+               BackgroundColor="Blue" HorizontalOptions="Center"/>
+
+        <Button Text="Animate" CornerRadius="30" BackgroundColor="BlueViolet" 
+                TextColor="White" HorizontalOptions="Center"
+                Clicked="Animate_Clicked"/>
     </StackLayout>
-
 </ContentPage>
